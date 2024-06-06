@@ -1,0 +1,26 @@
+NLP Theory
+
+The model needs to be able to match inputs (patterns) with the correct tag
+
+Steps Taken to Process the Data
+    1. Tokenization
+    2. Put Everything to Lowercase
+    3. Stemming
+    4. Remove Punctuation
+    5. Bag of Words
+
+Tokenization: Splitting a string into meaningful units
+ (ex:words, punctuation, numbers)
+
+Stemming: Generates the root form of the words. Chops of the ends of the words
+ Ex: organize, organizes, organizer all become organ
+
+Bag of Words: Collects different words and puts it into an array. Occurence of each words
+in the array is used by the model to map input to output
+
+
+The Model Being Used:
+    Feed Forward Neural Net
+        Input: Bag of Words
+        Output: Tag
+ 
