@@ -1,0 +1,117 @@
+{
+    "intents": [
+      {
+        "tag": "greeting",
+        "patterns": [
+          "Hi",
+          "Hey",
+          "How are you",
+          "Is anyone there?",
+          "Hello",
+          "Good day",
+          "What's up",
+          "Hey there",
+          "Hi there",
+          "Howdy",
+          "Greetings"
+        ],
+        "responses": [
+          "Hello, how may I be of assistance?",
+          "Hi there, what can I do for you?",
+          "Hi there, how can I help?"
+        ]
+      },
+      {
+        "tag": "goodbye",
+        "patterns": ["Bye", "See you later", "Goodbye", "Bye bye", "Till next time"],
+        "responses": [
+          "See you later, thanks for visiting",
+          "Have a nice day",
+          "Bye! Come back again soon.",
+          "Goodbye!",
+          "Bye! See you next time."
+        ]
+      },
+      {
+        "tag": "thanks",
+        "patterns": ["Thanks", "Thank you", "That's helpful", "Thank's a lot!", "Thank you so much", "Makes sense"],
+        "responses": ["Happy to help!", "Any time!", "My pleasure"]
+      },
+      
+      {
+        "tag": "items",
+        "patterns": [
+          "Which items do you have?",
+          "What kinds of items are there?",
+          "What do you sell?",
+          "What do you have?"
+        ],
+        "responses": [
+          "We sell clothes, shoes, hats, and watches",
+          "We have clothes, shoes, hats, and watches"
+        ]
+      },
+      {
+        "tag": "payments",
+        "patterns": [
+          "Do you take credit cards?",
+          "Do you accept Mastercard?",
+          "Can I pay with Paypal?",
+          "Are you cash only?"
+        ],
+        "responses": [
+          "We accept VISA, Mastercard, American Express and Paypal",
+          "We accept most major credit cards, and Paypal"
+        ]
+      },
+      {
+        "tag": "delivery",
+        "patterns": [
+          "How long does delivery take?",
+          "How long does shipping take?",
+          "When do I get my delivery?",
+          "When will I get my stuff?", 
+          "When will everything arrive", 
+          "When should I expect my order to be delivered?",
+          "How long will it take for my order to be delivered?", 
+          "How long till I get my order?",
+          "How many days does shipping take"
+        ],
+        "responses": [
+          "Delivery takes 3-5 buisness days",
+          "Shipping takes 3-5 buisness days"
+        ]
+      },
+      {
+        "tag": "funny",
+        "patterns": [
+          "Tell me a joke!",
+          "Tell me something funny!",
+          "Do you know a joke?"
+        ],
+        "responses": [
+          "What is an astronaut's favorite part on a computer? The space bar.",
+          "What do you call a fake noodle? An Impasta!",
+          "Why don't scientists trust atoms? Because they make up everything!",
+          "Why did the frog take the bus to work? His car got toad."
+        ]
+      },
+      {
+        "tag": "insult",
+        "patterns": [
+          "Your are useless",
+          "This sucks",
+          "What the hell?",
+          "What's wrong with you?"
+        ],
+        "responses": [
+          "I'm sorry. I don't want to hear that. Please try another question"
+        ]
+      },
+      {
+        "tag": "default",
+        "patterns": ["*"],
+        "responses": ["Sorry, I can't help you with that. Can you please try another question"]
+      }
+    ]
+  }
