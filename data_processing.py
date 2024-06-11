@@ -1,5 +1,6 @@
 import nltk
 import json
+import numpy as np
 #nltk.download('punkt')  # uncomment this if it's not downloaded, comment it out again after downloading
 from nltk.stem.porter import PorterStemmer
 stemmer = PorterStemmer()
@@ -13,7 +14,17 @@ def stem(word):
     return stemmer.stem(word.lower())
 
 def bag_of_words(tokenized_words, all_words):
-    pass
+    """
+    tokenized_words: ["hello", how", "are", "you"]
+    all_words: ["hi", "hello", "I", "you", "bye", "thank", "cool"]
+    returns: [0, 1, 0, 1, 0, 0, 0]
+    """
+    tokenized_words = [stem(w) for w in tokenized_words]
+    bag = np.zeros(len(all_words), dtype=np.float32) #[0, 0, 0, 0, 0, 0, 0]
+    for idx, w in enumerate(all_words):
+        if w in tokenized_words:
+            bag[idx] = 1.0        #Flips the them to 1
+    return bag
 
 def get_json_data():
     with open("intents.json", "r") as f:
@@ -45,4 +56,27 @@ def get_json_data():
     # print(len(tags), "tags:", tags)
     # print(len(all_words), "unique stemmed words:", all_words)
 
-    return all_words, tag, xy
+    return all_words, tags, xy
+
+if __name__ == "__main__":
+    #Testing Tokenization
+    print("\nTesting Tokenization")
+    print(tokenize("How are you doing?"))
+
+    #Testing Stemming
+    print("\nTesting Stemming")
+    print(stem("organic"))
+
+    #Testing get_json_data
+    print("\nTesting get_json_data")
+    all_words, tags, xy = get_json_data()
+    print(all_words)
+    print(tags)
+    print(xy)
+
+
+    #Testing Bag of Words
+    print("\nTesting Bag of Words")
+    tokenized_words =  ["hello", "how", "are", "you"]
+    all_words = ["hi", "hello", "I", "you", "bye", "thank", "cool"]
+    print(bag_of_words(tokenized_words, all_words))
