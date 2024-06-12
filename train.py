@@ -40,7 +40,32 @@ class ChatDataset(Dataset):
 
     def __len__(self):
         return self.n_samples
-def train():
+    
+def train(model):
+  criterion = nn.CrossEntropyLoss()
+  optimizer = torch.optim.Adam(model.parameters(), lr=LEARNING_RATE)
+  for epoch in range(EPOCHS):
+      for (words, labels) in train_loader:
+          words = words.to(device)
+          labels = labels.to(dtype=torch.long).to(device)
+
+          #forward pass
+          outputs = model(words)
+          loss = criterion(outputs, labels)
+
+          #backward and optimizer step
+          optimizer.zero_grad()
+          loss.backward()
+          optimizer.step()
+
+      if (epoch + 1) % 100 == 0:
+          print(f'epoch {epoch + 1}/{EPOCHS}, loss={loss.item():.3f}')
+
+  print(f'Final Loss, loss={loss.item():.3f}')
+
+
+
+if __name__ == "__main__":
     X_train, Y_train, tags = get_training_data()
 
     dataset = ChatDataset(x=X_train, y=Y_train)
@@ -48,36 +73,22 @@ def train():
 
     model = NeuralNet(input_size=len(X_train[0]), hidden_size=HIDDEN_SIZE, num_classes=len(tags))
 
-    #I know my device is not cuda capable 
-    #device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
-    #model.to(device)
+    device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+    model.to(device)
 
-    criterion = nn.CrossEntropyLoss()
-    optimizer = torch.optim.Adam(model.parameters(), lr=LEARNING_RATE)
+    train(model)
+    all_words, tags, xy = get_json_data()
 
-    for epoch in range(EPOCHS):
-        for (words, labels) in train_loader:
-            #words = words.to(device)
-            #labels = labels.to(dtype=torch.long).to(device)
-            labels = labels.to(dtype=torch.long)
+    data = {
+        "model_state": model.state_dict(),
+        "input_size": len(X_train[0]),
+        "hidden_size": HIDDEN_SIZE,
+        "output_size": len(tags),
+        "all_words": all_words,
+        "tags": tags
+    }
 
-            #forward pass
-            outputs = model(words)
-            loss = criterion(outputs, labels)
-
-            #backward and optimizer step
-            optimizer.zero_grad()
-            loss.backward()
-            optimizer.step()
-
-        if (epoch + 1) % 100 == 0:
-            print(f'epoch {epoch + 1}/{EPOCHS}, loss={loss.item():.3f}')
-
-    print(f'Final Loss, loss={loss.item():.3f}')
-
-
-
-if __name__ == "__main__":
-    train()
+    FILE = "data.pth"
+    torch.save(data, FILE)
     print("Done")
     
