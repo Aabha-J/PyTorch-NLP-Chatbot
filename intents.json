@@ -44,7 +44,8 @@
           "Which items do you have?",
           "What kinds of items are there?",
           "What do you sell?",
-          "What do you have?"
+          "What do you have?", 
+          "What can I buy?"
         ],
         "responses": [
           "We sell clothes, shoes, hats, and watches",
@@ -57,7 +58,9 @@
           "Do you take credit cards?",
           "Do you accept Mastercard?",
           "Can I pay with Paypal?",
-          "Are you cash only?"
+          "Are you cash only?",
+          "How can I pay?",
+          "What forms of payment do you accept?"
         ],
         "responses": [
           "We accept VISA, Mastercard, American Express and Paypal",
@@ -94,18 +97,6 @@
           "What do you call a fake noodle? An Impasta!",
           "Why don't scientists trust atoms? Because they make up everything!",
           "Why did the frog take the bus to work? His car got toad."
-        ]
-      },
-      {
-        "tag": "insult",
-        "patterns": [
-          "Your are useless",
-          "This sucks",
-          "What the hell?",
-          "What's wrong with you?"
-        ],
-        "responses": [
-          "I'm sorry. I don't want to hear that. Please try another question"
         ]
       },
       {
