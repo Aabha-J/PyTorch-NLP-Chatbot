@@ -20,7 +20,7 @@ in the array is used by the model to map input to output
 
 
 The Model Being Used:
-    Feed Forward Neural Net
+    Feedforward Neural Net
         Input: Bag of Words
         Output: Tag
  

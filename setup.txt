@@ -6,7 +6,7 @@ To install nesseacry libraries
 2. pip install numpy streamlit torch nltk
 
 To run chat in terminal:
-python run chat.python
+python run chat.py
 
 To run chat with streamlit UI:
 streamlist run app.py
