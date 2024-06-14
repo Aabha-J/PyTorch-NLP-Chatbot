@@ -36,7 +36,7 @@ Follow the instructions or checkout the setup.txt file
   
   To run chat with streamlit UI:
   
-    streamlist run app.py
+    streamlit run app.py
 
 # Theory
   The theory behind the ML model. This info is also available in the Theory.txt file
