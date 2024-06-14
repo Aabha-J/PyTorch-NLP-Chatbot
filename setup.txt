@@ -9,7 +9,7 @@ To run chat in terminal:
 python run chat.py
 
 To run chat with streamlit UI:
-streamlist run app.py
+streamlit run app.py
 
 
 If your processor is slow,use the Chatbot_in_Colab file in google colab to train the model
