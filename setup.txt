@@ -1,0 +1,15 @@
+After downloading the files or cloning this repository do these 
+steps in the terminal to see the chatbot in action
+
+To install nesseacry libraries
+pip install numpy streamlit torch
+
+To run chat in terminal:
+python run chat.python
+
+To run chat with streamlit UI:
+streamlist run app.py
+
+
+If your processor is slow,use the Chatbot_in_Colab in google colab to train the model
+and then download it. or use the provided data.pth file
