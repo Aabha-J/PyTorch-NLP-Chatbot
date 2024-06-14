@@ -11,5 +11,5 @@ To run chat with streamlit UI:
 streamlist run app.py
 
 
-If your processor is slow,use the Chatbot_in_Colab in google colab to train the model
+If your processor is slow,use the Chatbot_in_Colab file in google colab to train the model
 and then download it. or use the provided data.pth file
