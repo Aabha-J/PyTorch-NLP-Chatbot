@@ -3,6 +3,21 @@ I used pytorch and nltk to train an ML model and create a chatbot that can tell 
 about a typical clothes store. 
 
 # Demo
+
+## Screenshots
+### Type Your Questions
+
+<img width="581" alt="image" src="https://github.com/Aabha-J/PyTorch-NLP-Chatbot/assets/121515351/832b2dad-570a-45aa-a77d-97cc53d39a6a">
+
+### Get the Results
+
+<img width="583" alt="image" src="https://github.com/Aabha-J/PyTorch-NLP-Chatbot/assets/121515351/96cb93b0-49d8-40ec-9def-0592bb37efaa">
+
+### A Simple Conversation
+
+<img width="585" alt="image" src="https://github.com/Aabha-J/PyTorch-NLP-Chatbot/assets/121515351/6d77e3ac-4813-435b-9134-c66c9c030a91">
+
+## Video
 ![Untitled video - Made with Clipchamp](https://github.com/Aabha-J/PyTorch-NLP-Chatbot/assets/121515351/1854c93e-798c-4713-b724-b05265acf3b5)
 
 # Running the Project
