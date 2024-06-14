@@ -3,7 +3,7 @@ steps in the terminal to see the chatbot in action
 
 To install nesseacry libraries
 1. Set up a virtual python enviorment
-2. pip install numpy streamlit torch in the terminal
+2. pip install numpy streamlit torch nltk
 
 To run chat in terminal:
 python run chat.python
