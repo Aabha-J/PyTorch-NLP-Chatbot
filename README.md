@@ -17,7 +17,7 @@ Follow the instructions or checkout the setup.txt file
   
   To run chat in terminal:
       
-    python run chat.python
+    python run chat.py
   
   To run chat with streamlit UI:
   
